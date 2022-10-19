@@ -3,6 +3,7 @@ import "./index.css"
 import Die from "./Die"
 import {nanoid} from "nanoid"
 import Confetti from 'react-confetti'
+import Timer from "./Timer"
 
 export default function App() {
   const [dice,setDice] = React.useState(createNumbers())
@@ -63,6 +64,7 @@ export default function App() {
   })
   return (
     <main>
+    <Timer/>
     {tenzies && <Confetti/>}
      <h1 className="title">Tenzies</h1>
         <p className="text">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
